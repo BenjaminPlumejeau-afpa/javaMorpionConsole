@@ -136,6 +136,7 @@ public class Main {
      * @return 1 : le joueur à gagné; 0 : égalité; -1 : la partie continue
      */
     public static short etatPartie(char[][] grille, char joueur) {
+
         // vérification des diagonales
         if (((grille[0][0] == joueur) && (grille[1][1] == joueur) && (grille[2][2] == joueur))
                 ||
@@ -170,15 +171,16 @@ public class Main {
     }
 
 
+    /**
+     * Méthode demandant par saisi à l'utilisateur si une nouvelle partie doit être lancée ou non
+     *
+     * @return True pour relancer une partie, False pour arreter
+     */
     public static boolean rejouer() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Souhaitez-vous faire une nouvelle partie ? (o/n)");
         char reponse = sc.next().charAt(0);
-        if ((reponse == 'o') || (reponse == 'O')) {
-            return true;
-        }
-
-        return false;
+        return (reponse == 'o') || (reponse == 'O');
     }
 }
