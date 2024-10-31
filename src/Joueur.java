@@ -11,7 +11,7 @@ public class Joueur {
         return nom;
     }
 
-    public void setNom(String nom) {
+    private void setNom(String nom) {
         this.nom = nom;
     }
 
@@ -19,7 +19,7 @@ public class Joueur {
         return symbole;
     }
 
-    public void setSymbole(char symbole) {
+    private void setSymbole(char symbole) {
         this.symbole = symbole;
     }
 }
